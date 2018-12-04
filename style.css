@@ -1,0 +1,443 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1.25em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'PT Serif', serif;
+	
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #000;
+	text-decoration:underline;
+}
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: none;
+}
+h1,  h3, h4, h5, h6{
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 4.425em;
+}
+img{
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+h2{
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3.125em;
+}
+/* --------------- /базовые настройки ---------*/
+
+
+
+
+
+
+.subscribe {
+	background:#d03958;
+	display:table;
+	padding:20px;
+	margin: 155px 10px 10px;
+	border-radius: 5px;
+	max-width:395px;
+	float: right;
+	clear: both;
+}
+
+.subscribe h3{
+	font-family: 'Montserrat', sans-serif;	
+	font-size: 1.5em;
+	color:#fff;
+	text-align: center;	
+	margin:10px 10px 25px;
+}
+
+.subscribe input {
+	clear:both;
+}
+
+.subscribe input[type="text"], input[type="email"] {
+	border:	0;
+	width: 375px;
+	margin: 10px;
+	font-size:1.125em;
+	font-family: 'PT Serif', serif!important;
+	padding: 15px;
+	box-sizing:border-box;
+	border-radius:5px;
+	clear:both;
+}
+
+.subscribe input[type="submit"] {
+	background:#161616;
+	border:0px;
+	color:#fff;
+	font-size:1.25em;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:bold;
+	padding: 10px 35px;
+	cursor:pointer;
+	border-radius:5px;
+	clear:both;
+	width: 375px;
+	margin: 10px;
+}
+
+/* Скрываем реальный чекбокс */
+.checkbox {
+	display: none;
+}
+
+.checkbox-custom {
+	position: relative;      /* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
+	width: 15px;             /* Обязательно задаем ширину */
+	height: 15px;            /* Обязательно задаем высоту */
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color:#fff;
+	margin:10px;
+}
+/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+.checkbox-custom,
+.label {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: 'PT Serif', serif;	
+	color:#fff;
+	font-size:1.125em;
+}
+/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+.checkbox:checked + .checkbox-custom::before {
+	content: "";             /* Добавляем наш псевдоэлемент */
+	display: block;			 /* Делаем его блочным элементом */
+	position: absolute;      /* Позиционируем его абсолютным образом */
+	/* Задаем расстояние от верхней, правой, нижней и левой границы */
+	top: 2px;
+	right: 2px;
+	bottom: 2px;
+	left: 2px;
+	background: #413548;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+	border-radius: 2px;
+}
+
+.menu{
+	width: 1000px;
+	margin: 0px auto;
+}
+
+
+
+nav{
+	
+	float: right;
+	overflow: hidden;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	
+}
+
+nav ul li{
+	float: left;
+	padding: 60px 17px 0px;
+
+	
+}
+
+.home{
+	background: #d03958;
+	margin-top: 52px;
+	padding: 10px 15px;
+	border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+
+.home a{
+	color: #fff;
+}
+
+.blat{
+	width: 1000px;
+	overflow: hidden;
+	margin: 0px auto;
+	display: flex;	
+}
+
+.travel{
+	margin-top: 155px;
+	float: left;
+	max-width: 500px;
+	margin-right: 40px;
+}
+
+.our{
+	float:left;
+	margin-top: 150px;
+	display: block;
+}
+
+
+.services{
+	display: block;
+	width: 1000px;
+	margin: 10px auto;
+	clear: both;
+	display: flex;
+}
+
+.imag{
+	margin: 100px auto 65px;
+	float: left;
+	max-width: 160px;
+}
+.imag img{
+	height: 154px;
+	width: auto;
+}
+
+.imag p{
+	text-align: center;
+}
+
+.pink{
+	color: #d03958;
+}
+
+.services h2{
+	font-size:3.125em;
+}
+.fonpink{ 
+	background-color:#d03958;
+	color:#fff;
+}
+
+.meow{
+	width: 1000px;
+	margin:  auto;
+	display: flex;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.meow p{
+	float:left;
+}
+.meow input{
+	background-color: #e3d5b8;
+	float: right;
+	margin: auto 40px auto auto;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.bez{
+	padding-top: 65px;
+	background-color:#e3d5b8;
+	width:100%;
+	display: flex;
+}
+
+.bez h2{
+	text-align: center;
+}
+
+.rekl{
+	display: block;
+	float:left;
+	width:315px;
+	margin: 65px 10px 0px;
+	background-color: #fff;
+	max-width: 300px;
+	text-align: center;
+}
+.rekl input{
+	width: 200px;
+	background-color: #e3d5b8;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.rekl p{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+ .colortext {
+     color: black;
+ }
+
+article{
+	margin-top: 155px;
+	float: left;
+	max-width: 490px;
+}
+
+.testimonial{
+	display: block;
+	
+}
+
+.testimonial h2{
+	text-align: center;
+	margin-left: 25px;
+}
+
+.testimonial p{
+	margin-left: 25px;
+}
+
+.dj{
+	display: block;
+	margin-top: 65px;
+	background-color: #e3d5b8;
+	padding: 25px 85px 25px 25px;
+	float: left;
+}
+
+.dj img{
+	float: right;
+	margin-top: -90px;
+	margin-right: -100px;
+}
+
+aside{
+	max-width: 490px;
+	display: flex;
+	margin-top: 155px;
+	display: flex;
+	float: right;
+	margin-bottom: 120px;
+}
+
+aside div{
+	max-width: 390px;
+	float: right;
+}
+
+aside div h2{
+	margin-bottom: 65px;
+}
+
+aside div img{
+	max-width: 100px;
+	padding: 0px 5px 15px 5px;
+}
+
+aside div a{
+	font-family: 'Montserrat', sans-serif;
+	color: #d03958;
+	text-decoration: underline;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 15px;
+}
+
+footer{
+	background-color: #161616;
+	width: 100%;
+	display: flex;
+}
+
+footer div{
+	width: 1000px;
+	margin: auto;
+	display: flex;
+	margin: 40px auto;
+}
+
+footer div p{
+	color: #fff;
+	float: left;
+	margin: auto auto auto 0px; 
+}
+
+footer div a{
+	color: #d03958;
+}
+
+footer div img{
+	float: right;
+	margin: auto 40px auto auto;
+}
+
+
+	
+	
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'PT Serif', serif;*/

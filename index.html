@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"> 
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link href="animate.css" rel="stylesheet">
+<script src="jquery-3.3.1.js"></script>
+
+<script>
+		function animate(elem){
+			var effect = elem.data("effect");
+			elem.addClass("animated " + effect).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+				elem.removeClass("animated " + effect);
+			});
+		}
+		
+		$(document).ready(function(){
+			$(".test").mouseenter(function(){
+				animate($(this));
+			});
+			
+			$("#someid").click(function(){
+				animate($(this));
+			});
+		});
+</script>
+		<script src="wow.js"></script>
+		<script>
+			new WOW().init();
+		</script>
+
+
+
+<title>Company name - home page</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|PT+Serif" rel="stylesheet">
+</head>
+
+<body>
+	
+	<header>
+		<div class="menu animated zoomIn">
+			<nav>
+				<ul>
+					<li class="home"><a href="*">HOME</a></li>                            
+					<li><a href="*">ABOUT</a></li>
+					<li><a href="*">SERVICES</a></li>
+					<li><a href="*">GALLERY</a></li>
+					<li><a href="*">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>	
+		<div class="blat">		
+			<div class="travel  animated zoomIn">
+				<h1 class="pink">TRAVEL IS</h1> <h1>BEAUTIFUL</h1><br>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				<div class="our"><h2 class="pink">OUR <span class="colortext">SERVICES</span></h2></div>
+			</div>
+			
+			<div class="subscribe animated zoomIn">
+				<form action="" method="post">
+					<h3>REQUEST A QUOTE</h3>
+					<input type="text" name="name" placeholder="Full name">
+					<input type="email" name="email" placeholder="Email address">
+					<input type="text" name="phone" placeholder="Phone number">
+					<input type="text" name="country" placeholder="Country">
+					<label>
+	                    <input class="checkbox" type="checkbox" name="checkbox">
+	                    <span class="checkbox-custom"></span>
+	                    <span class="label">I accept the terms & conditions</span>
+	                </label>
+					<input type="submit" value="SEND">
+				</form>
+			</div>
+		</div>	
+	</header>	
+	
+	<div class="services">
+		
+		<div class="imag  animated zoomIn">
+			<img src="images/heart.png" >
+			<p>Making your trip beautiful and easier</p>
+		</div>
+		<div class="imag  animated zoomIn">
+			<img src="images/instr.png">
+			<p>Tools to help you succeed tommorow</p>
+		</div>
+		<div class="imag  animated zoomIn">
+			<img src="images/lampa.png">
+			<p>Ideas that will blow you out the blue.</p>
+		</div>
+		<div class="imag animated zoomIn">
+			<img src="images/compas.png">
+			<p>Navigate your path to beautiful world.</p>
+		</div>
+	</div>
+	<div class="fonpink wow fadeInUp" data-wow-duration="5s">	
+		<div class="meow">		
+			<p>We are in business for over 6 years providing amazing services to client<br> and people love them to the core. View our story to know more.</p>
+			<input type="submit" value="OUR STORY">		
+		</div>
+	</div>
+	
+	<div class="bez">	
+		<div class="menu">
+			<h2>PRICING</h2> 
+			<div class="rekl wow slideInLeft" data-wow-delay="1s">
+				<p>Starter</p>
+				<h2 class="pink">FREE</h2>
+				<p> Free Service<br>
+					Multiple Accounts<br>
+					Management No<br>
+					--<br>
+					--</p>
+				<form action="" method="post">
+					<input type="submit" value="TRY">
+				</form>
+			</div>								
+			<div class="rekl wow pulse" data-wow-delay="1s">
+				<p>Business</p>
+				<h2 class="pink">$97</h2>
+				<p> Free Service<br>
+					Multiple Accounts<br>
+					Management No<br>
+					Unlimited Data<br>
+					- -</p>
+				<form action="" method="post">
+					<input type="submit" value="SIGN UP">
+				</form>
+			</div>
+			<div class="rekl wow slideInRight" data-wow-delay="1s">
+				<p>Professional</p>
+				<h2 class="pink">$297</h2>
+				<p> Free Service<br>
+					Multiple Accounts<br>
+					Management No<br>
+					Unlimited Data<br>
+					Whatever You Need</p>
+				<form action="" method="post">
+					<input type="submit" value="SIGN UP">
+				</form>
+			</div>
+		</div>	
+	</div>
+	
+	<div class="menu">
+		<article class="wow  slideInLeft">
+			<div class="testimonial">
+				<h2>TESTIMONIAL</h2>
+				<p>I have been involved with this comapny for ages and just want to say this is a great work by designcoon.</p><br>
+				<p class="pink animated test" data-effect="pulse">DJ Bravo - Frequent Travelera</p>
+			</div>
+			<div class="dj">
+				<p>I have been involved with this comapny for ages and just.</p><br>
+				<p class="pink animated test" data-effect="pulse">DJ Bravo - Frequent Travelera</p>
+				<img src="images/monkey.png">
+			</div>
+		</article>
+		
+		<aside class="wow slideInRight">
+			<div>
+				<h2 class="pink">GALLERY</h2>
+				<img class="animated test" data-effect="tada" src="images/lady.png">
+				<img class="animated test" data-effect="tada" src="images/berries.png">
+				<img class="animated test" data-effect="tada" src="images/lemon.png">
+				<img class="animated test" data-effect="tada" src="images/coffee.png">
+				<img class="animated test" data-effect="tada" src="images/spring.png">
+				<img class="animated test" data-effect="tada" src="images/stone.png">
+				<a class="animated test" data-effect="pulse" href="*">VIEW MORE PICTURES</a>
+			</div>
+		</aside>		
+	</div>
+		<footer>
+			<div>
+				<p>All Rights Reserved |  2016  |  Designed with love by <a href="*">DesignCoon</a></p>
+				<img src="images/logo.png">
+			</div>
+		</footer>
+</body>
+</html>
